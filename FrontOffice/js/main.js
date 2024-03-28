@@ -110,3 +110,48 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the login and register tabs
+    var loginTab = document.getElementById("tab-login");
+    var registerTab = document.getElementById("tab-register");
+    
+    // Get references to the login and register form containers
+    var loginForm = document.getElementById("pills-login");
+    var registerForm = document.getElementById("pills-register");
+
+    // Add click event listener to the register tab
+    registerTab.addEventListener("click", function(event) {
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Hide the login form and show the register form
+        loginForm.classList.remove("show", "active");
+        registerForm.classList.add("show", "active");
+
+        // Update active classes for tabs
+        loginTab.classList.remove("active");
+        registerTab.classList.add("active");
+
+        loginTab.style.removeProperty("background-color: #4B9D7B");
+        registerTab.style.setProperty("background-color: #4B9D7B");
+    });
+
+    // Add click event listener to the login tab
+    loginTab.addEventListener("click", function(event) {
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Hide the register form and show the login form
+        registerForm.classList.remove("show", "active");
+        loginForm.classList.add("show", "active");
+
+        // Update active classes for tabs
+        registerTab.classList.remove("active");
+        loginTab.classList.add("active");
+
+        loginTab.style.setProperty("background-color: #4B9D7B");
+        registerTab.style.removeProperty("background-color: #4B9D7B");
+
+    });
+});
+

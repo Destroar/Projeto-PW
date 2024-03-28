@@ -14,8 +14,13 @@
     z-index: 99;
 }
 
-.nicomojifont {
-    font-family: 'Niconne', cursive !important;
+.cor-verde {
+    color: #4B9D7B;
+}
+
+.background-verde {
+    background-color: #4B9D7B;
+    border-color: #4B9D7B;
 }
 
 /*** Spinner ***/
