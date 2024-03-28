@@ -222,7 +222,7 @@
     height: 2px;
     top: 4px;
     left: -40px;
-    background: var(--primary);
+    background: #4B9D7B;
     z-index: -1;
 }
 
@@ -233,7 +233,7 @@
     height: 2px;
     bottom: 4px;
     left: -60px;
-    background: var(--primary);
+    background: #4B9D7B;
     z-index: -1;
 }
 
