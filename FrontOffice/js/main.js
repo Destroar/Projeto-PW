@@ -132,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function() {
         loginTab.classList.remove("active");
         registerTab.classList.add("active");
 
-        loginTab.style.removeProperty("background-color: #4B9D7B");
-        registerTab.style.setProperty("background-color: #4B9D7B");
+        loginTab.style.removeProperty("background-color");
+        registerTab.style.backgroundColor = "#4B9D7B";
     });
 
     // Add click event listener to the login tab
@@ -149,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
         registerTab.classList.remove("active");
         loginTab.classList.add("active");
 
-        loginTab.style.setProperty("background-color: #4B9D7B");
-        registerTab.style.removeProperty("background-color: #4B9D7B");
+        loginTab.style.backgroundColor = "#4B9D7B";
+        registerTab.style.removeProperty("background-color");
 
     });
 });
