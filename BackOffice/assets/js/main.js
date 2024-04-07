@@ -8,15 +8,14 @@
 
 window.onload = pageload;
 
-
 function pageload() {
-  var botaoPesquisa = document.getElementById("botaoPesquisa");
+  let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
   }
 
   function searchbar() {
-    var searchTerm = document.getElementById('search').value;
-    var elementoRelatorio = document.getElementById('idPesquisa');
+    let searchTerm = document.getElementById('search').value;
+    let elementoRelatorio = document.getElementById('idPesquisa');
     if (searchTerm === 'relatorio') {
       elementoRelatorio.scrollIntoView({ behavior: 'smooth' });
     }
