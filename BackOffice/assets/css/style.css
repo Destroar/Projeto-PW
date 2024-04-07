@@ -418,24 +418,27 @@ h6 {
     transition: 0.3s;
     visibility: hidden;
     opacity: 0;
+    
   }
 
   .header .search-bar-show {
     top: 60px;
     visibility: visible;
     opacity: 1;
+    
   }
 }
 
 .header .search-form {
   width: 100%;
+  ; 
 }
 
 .header .search-form input {
-  border: 0;
+  border: 1;
   font-size: 14px;
   color: black;
-  border: 1px solid rgba(1, 41, 112, 0.2);
+  border: 1px solid rgba(75, 157, 123, 1);
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
   transition: 0.3s;
@@ -464,6 +467,20 @@ h6 {
   margin-left: 10px;
   margin-right: 25px;
   color:#5F9EA0;
+}
+
+.input-group{
+  margin:1rem;
+}
+
+.form-outline{
+  width: 25rem;
+}
+
+.btn.btn-primary{
+  background-color: #4B9D7B;
+  border-color: #4B9D7B;
+  height: 36px;
 }
 
 /*--------------------------------------------------------------
