@@ -6,6 +6,23 @@
 * License: https://bootstrapmade.com/license/
 */
 
+window.onload = pageload;
+
+
+function pageload() {
+  var botaoPesquisa = document.getElementById("botaoPesquisa");
+  botaoPesquisa.onclick = searchbar;
+  }
+
+  function searchbar() {
+    var searchTerm = document.getElementById('search').value;
+    var elementoRelatorio = document.getElementById('idPesquisa');
+    if (searchTerm === 'relatorio') {
+      elementoRelatorio.scrollIntoView({ behavior: 'smooth' });
+    }
+    }
+  
+
 (function() {
   "use strict";
 
