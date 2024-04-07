@@ -38,6 +38,11 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.linhaBaixo{
+  border-bottom: 1px solid #4682B4;
+  padding-bottom: 3px;
+}
+
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
@@ -63,7 +68,7 @@ h6 {
 
 .pagetitle h1 {
   font-size: 24px;
-  margin-bottom: 0;
+  margin-bottom: 35px;
   font-weight: 600;
   color: grey;
 }
