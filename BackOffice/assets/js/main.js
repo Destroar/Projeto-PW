@@ -11,6 +11,14 @@ window.onload = pageload;
 function pageload() {
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
+  
+  let searchInput = document.getElementById("search");
+  searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Impede o comportamento padrão do Enter
+      searchbar(); // Chama a função searchbar quando "Enter" é pressionado
+    }
+  });
   }
 
   function searchbar() {
@@ -20,8 +28,10 @@ function pageload() {
       elementoRelatorio.scrollIntoView({ behavior: 'smooth' });
     }
     }
-  
 
+    
+  
+    
 (function() {
   "use strict";
 
