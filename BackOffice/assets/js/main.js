@@ -24,7 +24,7 @@ function pageload() {
   function searchbar() {
     let searchTerm = document.getElementById('search').value;
     let elementoRelatorio = document.getElementById('idPesquisa');
-    if (searchTerm === 'relatorio') {
+    if (searchTerm === 'relatório') {
       elementoRelatorio.scrollIntoView({ behavior: 'smooth' });
     }
     }
