@@ -7,11 +7,21 @@
 */
 
 window.onload = pageload;
+localStorage.setItem("FiltroAtividadesMes", "30");
 
 function pageload() {
+  //Pesquisar na barra de pesquisa
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
-  
+
+  //Filtro cartao das atividades Mes
+  let filtroAtividadesMes = document.getElementById("filtroAtividadesMes");
+  filtroAtividadesMes.addEventListener("click", function() {
+  filtroMes();
+  });
+
+
+  //Ao clicar no enter na barra de pesquisa
   let searchInput = document.getElementById("search");
   searchInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -19,14 +29,22 @@ function pageload() {
       searchbar(); // Chama a função searchbar quando "Enter" é pressionado
     }
   });
-  }
+  
+  } //fim do pageLoad
 
-  function searchbar() {
+  //Funcao da barra de pesquisa
+  function searchbar() { 
     let searchTerm = document.getElementById('search').value;
     let elementoRelatorio = document.getElementById('idPesquisa');
     if (searchTerm === 'relatório') {
       elementoRelatorio.scrollIntoView({ behavior: 'smooth' });
     }
+    }
+
+    //funcao do filtro mes
+    function filtroMes(){
+      let valor = document.getElementById("valorAlterarAtividades");
+      valor.textContent = localStorage.getItem("FiltroAtividadesMes");
     }
 
     
