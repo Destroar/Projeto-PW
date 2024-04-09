@@ -8,6 +8,7 @@
 
 window.onload = pageload;
 localStorage.setItem("FiltroAtividadesMes", "30");
+localStorage.setItem("nomeFiltroMes","| Hoje");
 
 function pageload() {
   //Pesquisar na barra de pesquisa
@@ -45,6 +46,8 @@ function pageload() {
     function filtroMes(){
       let valor = document.getElementById("valorAlterarAtividades");
       valor.textContent = localStorage.getItem("FiltroAtividadesMes");
+      let nome = document.getElementById("nomeFiltroAtividadesMes");
+      nome.textContent = localStorage.getItem("nomeFiltroMes");
     }
 
     
