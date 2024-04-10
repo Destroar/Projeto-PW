@@ -10,6 +10,7 @@ window.onload = pageload;
 localStorage.setItem("FiltroAtividadesHoje", "2");
 localStorage.setItem("FiltroAtividadesSemana", "10");
 localStorage.setItem("FiltroAtividadesMes", "30");
+localStorage.setItem("FiltroAtividadesAno", "106");
 
 function pageload() {
   //Pesquisar na barra de pesquisa
@@ -18,6 +19,8 @@ function pageload() {
 
   //VerificaNumeroAtividades
   verificaNumeroAtividades();
+
+ // verificaElemento(); Utilizar quando atualizarmos o localStorage para carregar elemento default
 
 
   //Filtro cartao das atividades hoje
@@ -36,6 +39,12 @@ function pageload() {
    let filtroAtividadesMes = document.getElementById("filtroAtividadesMes");
    filtroAtividadesMes.addEventListener("click", function() {
    filtroMes();
+   });
+
+  //Filtro cartao das Atividades Ano
+   let filtroAtividadesAno = document.getElementById("filtroAtividadesAno");
+   filtroAtividadesAno.addEventListener("click", function() {
+   filtroAno();
    });
 
 
@@ -90,6 +99,23 @@ function pageload() {
       let nome = document.getElementById("nomeFiltroAtividades");
       nome.textContent = "| Mês";
     }
+
+    //funcao do filtro Ano
+    function filtroAno(){
+      let valor = document.getElementById("valorAlterarAtividades");
+      valor.textContent = localStorage.getItem("FiltroAtividadesAno");
+      let nome = document.getElementById("nomeFiltroAtividades");
+      nome.textContent = "| Ano";
+    }
+
+    //funcao verifica que existe elemento no localStorage
+    function verificaElemento(){
+      if(!(localStorage.getItem("FiltroAtividadesMes"))){
+        localStorage.setItem("FiltroAtividadesMes", "30");
+      }
+    }
+
+
     
   
     
