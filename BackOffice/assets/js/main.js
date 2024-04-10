@@ -7,19 +7,36 @@
 */
 
 window.onload = pageload;
+localStorage.setItem("FiltroAtividadesHoje", "2");
+localStorage.setItem("FiltroAtividadesSemana", "10");
 localStorage.setItem("FiltroAtividadesMes", "30");
-localStorage.setItem("nomeFiltroMes","| Hoje");
 
 function pageload() {
   //Pesquisar na barra de pesquisa
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
 
-  //Filtro cartao das atividades Mes
-  let filtroAtividadesMes = document.getElementById("filtroAtividadesMes");
-  filtroAtividadesMes.addEventListener("click", function() {
-  filtroMes();
+  //VerificaNumeroAtividades
+  verificaNumeroAtividades();
+
+
+  //Filtro cartao das atividades hoje
+  let filtroAtividadesHoje = document.getElementById("filtroAtividadesHoje");
+  filtroAtividadesHoje.addEventListener("click", function() {
+  filtroHoje();
   });
+
+   //Filtro cartao das atividades Semana
+   let filtroAtividadesSemana = document.getElementById("filtroAtividadesSemana");
+   filtroAtividadesSemana.addEventListener("click", function() {
+   filtroSemana();
+   });
+
+   //Filtro cartao das atividades Mes
+   let filtroAtividadesMes = document.getElementById("filtroAtividadesMes");
+   filtroAtividadesMes.addEventListener("click", function() {
+   filtroMes();
+   });
 
 
   //Ao clicar no enter na barra de pesquisa
@@ -42,14 +59,37 @@ function pageload() {
     }
     }
 
-    //funcao do filtro mes
+    //Verifica numero do cartao das atividades
+    function verificaNumeroAtividades(){
+      let valor = document.getElementById("valorAlterarAtividades");
+      if(valor !== localStorage.getItem("FiltroAtividadesMes")){
+        valor.textContent = localStorage.getItem("FiltroAtividadesMes");
+      }
+    }
+
+    //funcao do filtro hoje
+    function filtroHoje(){
+      let valor = document.getElementById("valorAlterarAtividades");
+      valor.textContent = localStorage.getItem("FiltroAtividadesHoje");
+      let nome = document.getElementById("nomeFiltroAtividades");
+      nome.textContent = "| Hoje";
+    }
+
+    //funcao do filtro semana
+    function filtroSemana(){
+      let valor = document.getElementById("valorAlterarAtividades");
+      valor.textContent = localStorage.getItem("FiltroAtividadesSemana");
+      let nome = document.getElementById("nomeFiltroAtividades");
+      nome.textContent = "| Semana";
+    }
+
+    //funcao do filtro Mes
     function filtroMes(){
       let valor = document.getElementById("valorAlterarAtividades");
       valor.textContent = localStorage.getItem("FiltroAtividadesMes");
-      let nome = document.getElementById("nomeFiltroAtividadesMes");
-      nome.textContent = localStorage.getItem("nomeFiltroMes");
+      let nome = document.getElementById("nomeFiltroAtividades");
+      nome.textContent = "| Mês";
     }
-
     
   
     
