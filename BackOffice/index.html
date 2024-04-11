@@ -741,7 +741,7 @@
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
+                      <h6>Filtro</h6>
                     </li>
 
                     <li><a class="dropdown-item" href="#">Today</a></li>
@@ -751,49 +751,48 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Recent Sales <span>| Today</span></h5>
-
+                  <h5 class="card-title">Pedidos recentes <span>| Today</span></h5>
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Atividade</th>
+                        <th scope="col">Local</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
                         <td>Brandon Jacob</td>
                         <td><a href="#" class="text-primary">At praesentium minu</a></td>
                         <td>$64</td>
                         <td><span class="badge bg-success">Approved</span></td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
                         <td>Bridie Kessler</td>
                         <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
                         <td>$47</td>
                         <td><span class="badge bg-warning">Pending</span></td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
                         <td>Ashleigh Langosh</td>
                         <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
                         <td>$147</td>
                         <td><span class="badge bg-success">Approved</span></td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
                         <td>Angus Grady</td>
                         <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
                         <td>$67</td>
                         <td><span class="badge bg-danger">Rejected</span></td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
                         <td>Raheem Lehner</td>
                         <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
                         <td>$165</td>
@@ -977,9 +976,9 @@
             </div>
 
             <div class="card-body pb-0">
-              <h5 class="card-title">Material em uso <span>| Mês</span></h5>
+              <h5 class="card-Material">Material <span>| Mês</span></h5>
 
-              <canvas id="doughnutChart" style="padding-bottom: 38px; max-height: 395px;"></canvas>
+              <canvas id="doughnutChart" style= "padding: 30px 30px 30px 30px; ;   max-height: 396px;"></canvas>
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                   new Chart(document.querySelector('#doughnutChart'), {
@@ -987,8 +986,6 @@
                     data: {
                       labels: [
                         'Material em uso',
-                        
-                        
                       ],
                       datasets: [{
                         label: 'Material',
@@ -996,7 +993,7 @@
                         backgroundColor: [
                           'rgb(95, 158, 160)',
                          
-                          'rgb(255, 205, 86)'
+                          'rgb(220, 220, 220)'
                         ],
                         hoverOffset: 4
                       }]
