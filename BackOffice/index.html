@@ -733,78 +733,116 @@
               </div>
             </div><!-- End Reports -->
 
-            <!-- Recent Sales --><!--
+            <!-- Pedidos recentes-->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filtro</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Pedidos recentes <span>| Today</span></h5>
-                  <table class="table table-borderless datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Cliente</th>
-                        <th scope="col">Atividade</th>
-                        <th scope="col">Local</th>
-                        <th scope="col">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>$64</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                        <td>$47</td>
-                        <td><span class="badge bg-warning">Pending</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                        <td>$147</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                        <td>$67</td>
-                        <td><span class="badge bg-danger">Rejected</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Raheem Lehner</td>
-                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                        <td>$165</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                <div class="cardPedidos">
+                  <div class="card-body">
+                    <h5 class="card-title">Pedidos recentes</h5>
+                    <!-- Small tables -->
+                    <table class="table table-md">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Nome</th>
+                          <th scope="col">Atividade</th>
+                          <th scope="col">Data proposta</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                          <td>João Silva</td>
+                          <td> <a class="corLink" href="#"> Caminhada parque da cidade Guimarães</a></td>
+                          <td>25-06-2024</td> 
+                          <td><span class="badge bg-success">Approved</span></td>
+                        </tr>
+                        
+                        <tr>
+                          <th scope="row"></th>
+                          <td>Joana Santos</td>
+                          <td><a class="corLink" href="#"> Aula de dança - Póvoa de Varzim</a></td>
+                          <td>25-06-2024</td>
+                          <td><span class="badge bg-warning">Pending </span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                          <td>João Castro</td>
+                          <td>Aula de natação Tempo livre - Guimarães</td>
+                          <td>25-07-2024</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                          <td>Angus Grady</td>
+                          <td><a class="corLink" href="#">Aula de xadrez - Atães</a></td>
+                          <td>25-07-2024</td>
+                          <td><span class="badge bg-success">Approved</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                          <td>Raheem Lehner</td>
+                          <td>Aula de ioga - Santo Tirso</td>
+                          <td>25-08-2024</td>
+                          <td><span class="badge bg-danger">Rejected</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End small tables -->
+      
+                  </div>
                 </div>
 
               </div>
-            </div> --><!-- End Recent Sales -->
+            </div> <!-- End Recent Sales -->
+
+             <!-- Doações recentes-->
+             <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                
+
+                <div class="cardPedidos">
+                  <div class="card-body">
+                    <h5 class="card-title">Doações recentes</h5>
+                    <!-- Small tables -->
+                    <table class="table table-md">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Quantidade</th>
+                          <th scope="col">Evento/Organização</th>
+                          <th scope="col">Orçamento</th>
+                          <th scope="col">Método de pagamento</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"></th>
+                          <td>23€</td>
+                          <td> Caminhada parque da cidade Guimarães</td>
+                          <td>42€-100€</td> 
+                          <td>Multibanco</td>
+                        </tr>
+                        
+                        <tr>
+                          <th scope="row"></th>
+                          <td>50€</td>
+                          <td>GoHelp</td>
+                          <td>2500€</td>
+                          <td>MbWay</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End small tables -->
+      
+                  </div>
+                </div>
+
+              </div>
+            </div>
 
             <!-- Top Selling --> <!--
             <div class="col-12">
@@ -1020,10 +1058,10 @@
               </ul>
             </div>
 
-            <div class="card-body pb-0">
+            <div class="card-body">
               <h5 class="card-title">Áreas das atividades <span>| Today</span></h5>
 
-              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+              <div id="trafficChart" style="min-height: 335px;" class="echart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -1033,13 +1071,13 @@
                       show:false
                     },
                     legend: {
-                      top: '5%',
+                      top: '2%',
                       left: 'center'
                     },
                     series: [{
                       name: 'Área',
                       type: 'pie',
-                      radius: ['40%', '70%'],
+                      radius: ['35%', '65%'],
                       avoidLabelOverlap: false,
                       label: {
                         show: false,

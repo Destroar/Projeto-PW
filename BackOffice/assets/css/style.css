@@ -224,10 +224,21 @@ h6 {
 
 /* Card */
 .card {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.cardPedidos{
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.cardPedidos-body {
+  padding: 0px 20px 20px 20px;
 }
 
 .card-header,
@@ -239,7 +250,7 @@ h6 {
 }
 
 .card-title {
-  padding: 0px 0 16px 0;
+  padding: 0px 0 5px 0;
   font-size: 18px;
   font-weight: 500;
   color: #5F9EA0; 
@@ -269,7 +280,7 @@ h6 {
 
 
 .card-body {
-  padding: 0 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .card-img-overlay {
@@ -372,6 +383,8 @@ h6 {
   color: #4682B4;
   border-bottom: 2px solid #4682B4;
 }
+
+
 
 /*--------------------------------------------------------------
 # Header
@@ -819,10 +832,17 @@ h6 {
 # Dashboard
 --------------------------------------------------------------*/
 /* Filter dropdown */
+.corLink{
+  color: #4682B4;
+  text-decoration: none;
+}
+
+
 .dashboard .filter {
   position: absolute;
   right: 0px;
   top: 15px;
+  z-index: 999;
 }
 
 .dashboard .filter .icon {
@@ -835,7 +855,7 @@ h6 {
 
 .dashboard .filter .icon:hover,
 .dashboard .filter .icon:focus {
-  color: #4154f1;
+  color: #4682B4;
 }
 
 .dashboard .filter .dropdown-header {
