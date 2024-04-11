@@ -1036,6 +1036,17 @@ h6 {
   max-width: 60px;
 }
 
+/* Pedidos recentes */
+
+.headerTabela{
+  background-color: #5F9EA0;
+  
+}
+
+.headerTabelaCor{
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Icons list page
 --------------------------------------------------------------*/
