@@ -311,6 +311,8 @@
 /*** Sobre Nós ***/
 .about-us {
     background-image: url("img/background.jpg");
+    background-size: cover;
+    background-position-y: 90rem;
 }
 
 /*** Service ***/
