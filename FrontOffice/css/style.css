@@ -312,7 +312,9 @@
 .about-us {
     background-image: url("img/background.jpg");
     background-size: cover;
-    background-position-y: 90rem;
+    background-position-y: 100rem;
+    position: relative;
+    z-index: -2;
 }
 
 /*** Service ***/
