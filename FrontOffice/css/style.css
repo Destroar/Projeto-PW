@@ -309,7 +309,7 @@
 }
 
 /*** Sobre Nós ***/
-.about-us {
+.back-img {
     background-size: cover;
     background-position-y: 95rem;
     position: relative;
@@ -326,12 +326,12 @@
     z-index: 1;
 }
 
-.container-xxl {
+.conteudo-frente {
     position: relative;
     z-index: 2;
 }
 
-.about-us-p {
+.dark-grey-p {
     color: rgb(58,58,58);
 }
 
