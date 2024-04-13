@@ -679,53 +679,6 @@
 
                   <!-- Line Chart -->
                   <div id="reportsChart"></div>
-
-                  <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Atividades',
-                          data: [31, 40, 28, 51, 42, 82, 56, 31, 29, 20, 15, 30],
-                        }, {
-                          name: 'Doações',
-                          data: [11, 32, 45, 32, 34, 52, 41, 10, 53, 35, 60, 120]
-                        },],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          },
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          
-                          categories: ['Jan', 'Feb', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul','Ago','Setem', 'Out','Nov','Dez']
-                        },
-
-                       
-                      }).render();
-                    });
-                  </script>
                   <!-- End Line Chart -->
 
                 </div>
@@ -755,7 +708,7 @@
                         <tr>
                           <th scope="row"></th>
                           <td>João Silva</td>
-                          <td> <a class="corLink" href="#"> Caminhada parque da cidade Guimarães</a></td>
+                          <td> <a class="corLink" href="#"> Caminhada parque da cidade - Guimarães</a></td>
                           <td>25-06-2024</td> 
                           <td><span class="badge bg-success">Approved</span></td>
                         </tr>
@@ -822,7 +775,7 @@
                         <tr>
                           <th scope="row"></th>
                           <td>23€</td>
-                          <td> Caminhada parque da cidade Guimarães</td>
+                          <td> Caminhada parque da cidade - Guimarães</td>
                           <td>42€-100€</td> 
                           <td>Multibanco</td>
                         </tr>
@@ -1016,29 +969,7 @@
             <div class="card-body pb-0">
               <h5 class="card-Material">Material <span>| Mês</span></h5>
 
-              <canvas id="doughnutChart" style= "padding: 30px 30px 30px 30px; ;   max-height: 396px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#doughnutChart'), {
-                    type: 'doughnut',
-                    data: {
-                      labels: [
-                        'Material em uso',
-                      ],
-                      datasets: [{
-                        label: 'Material',
-                        data: [100,25],
-                        backgroundColor: [
-                          'rgb(95, 158, 160)',
-                         
-                          'rgb(220, 220, 220)'
-                        ],
-                        hoverOffset: 4
-                      }]
-                    }
-                  });
-                });
-              </script>
+              <canvas id="doughnutChart"></canvas>
 
             </div>
           </div><!-- End Budget Report -->
@@ -1061,58 +992,7 @@
             <div class="card-body">
               <h5 class="card-title">Áreas das atividades <span>| Today</span></h5>
 
-              <div id="trafficChart" style="min-height: 335px;" class="echart"></div>
-
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  echarts.init(document.querySelector("#trafficChart")).setOption({
-                    tooltip: {
-                      trigger: 'item',
-                      show:false
-                    },
-                    legend: {
-                      top: '2%',
-                      left: 'center'
-                    },
-                    series: [{
-                      name: 'Área',
-                      type: 'pie',
-                      radius: ['35%', '65%'],
-                      avoidLabelOverlap: false,
-                      label: {
-                        show: false,
-                        position: 'center'
-                        
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: '13',
-                          fontWeight: 'bold',
-                          formatter: '{b}\n{c}'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [{
-                        value: 1048,
-                        name: 'Iniciativa desportiva'
-                      },
-                      {
-                        value: 735,
-                        name: 'Saúde mental'
-                      },
-                      {
-                        value: 580,
-                        name: 'Bem-estar da comunidade'
-                      }
-                      ]
-                    }]
-                  });
-                });
-              </script>
-
+              <div id="trafficChart" class="echart"></div>
             </div>
           </div><!-- End Website Traffic -->
 

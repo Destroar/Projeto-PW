@@ -448,4 +448,121 @@ function pageload() {
     }, 200);
   }
 
+  //Gráfico áreas das atividades
+  document.addEventListener("DOMContentLoaded", () => {
+    echarts.init(document.querySelector("#trafficChart")).setOption({
+      tooltip: {
+        trigger: 'item',
+        show:false
+      },
+      legend: {
+        top: '2%',
+        left: 'center'
+      },
+      series: [{
+        name: 'Área',
+        type: 'pie',
+        radius: ['35%', '65%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false,
+          position: 'center'
+          
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: '13',
+            fontWeight: 'bold',
+            formatter: '{b}\n{c}'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data: [{
+          value: 1048,
+          name: 'Iniciativa desportiva'
+        },
+        {
+          value: 735,
+          name: 'Saúde mental'
+        },
+        {
+          value: 580,
+          name: 'Bem-estar da comunidade'
+        }
+        ]
+      }]
+    });
+  });
+
+  //Gráfico material em uso
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    new Chart(document.querySelector('#doughnutChart'), {
+      type: 'doughnut',
+      data: {
+        labels: [
+          'Material em uso',
+        ],
+        datasets: [{
+          label: 'Material',
+          data: [100,25],
+          backgroundColor: [
+            'rgb(95, 158, 160)',
+            'rgb(220, 220, 220)'
+          ],
+          hoverOffset: 4
+        }]
+      }
+    });
+  });
+
+  //Gráfico atividades meses
+  document.addEventListener("DOMContentLoaded", () => {
+    new ApexCharts(document.querySelector("#reportsChart"), {
+      series: [{
+        name: 'Atividades',
+        data: [31, 40, 28, 51, 42, 82, 56, 31, 29, 20, 15, 30],
+      }, {
+        name: 'Doações',
+        data: [11, 32, 45, 32, 34, 52, 41, 10, 53, 35, 60, 120]
+      },],
+      chart: {
+        height: 350,
+        type: 'area',
+        toolbar: {
+          show: false
+        },
+      },
+      markers: {
+        size: 4
+      },
+      colors: ['#4154f1', '#2eca6a'],
+      fill: {
+        type: "gradient",
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.3,
+          opacityTo: 0.4,
+          stops: [0, 90, 100]
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth',
+        width: 2
+      },
+      xaxis: {
+        
+        categories: ['Jan', 'Feb', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul','Ago','Setem', 'Out','Nov','Dez']
+      },
+
+     
+    }).render();
+  });
+
 })();

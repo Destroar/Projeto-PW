@@ -837,6 +837,15 @@ h6 {
   text-decoration: none;
 }
 
+#trafficChart{
+  min-height: 335px;
+}
+
+#doughnutChart{
+  padding: 10px 10px 10px 10px;
+  max-height: 391px;
+
+}
 
 .dashboard .filter {
   position: absolute;
