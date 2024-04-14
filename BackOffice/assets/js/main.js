@@ -505,13 +505,14 @@ function pageload() {
       data: {
         labels: [
           'Material em uso',
+          'Material disponível'
         ],
         datasets: [{
           label: 'Material',
           data: [100,25],
           backgroundColor: [
-            'rgb(95, 158, 160)',
-            'rgb(220, 220, 220)'
+            'rgb(72, 169, 128)',
+            'rgb(230,230,250)'
           ],
           hoverOffset: 4
         }]

@@ -83,7 +83,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #5F9EA0;
+  background: #48A980;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -253,7 +253,7 @@ h6 {
   padding: 0px 0 5px 0;
   font-size: 18px;
   font-weight: 500;
-  color: #5F9EA0; 
+  color: #48A980; 
   font-family: "Poppins", sans-serif;
 }
 
@@ -267,7 +267,7 @@ h6 {
   padding: 0px 0 0px 0;
   font-size: 18px;
   font-weight: 500;
-  color: #5F9EA0; 
+  color: #48A980; 
   font-family: "Poppins", sans-serif;
 }
 
@@ -391,7 +391,7 @@ h6 {
 --------------------------------------------------------------*/
 .logo {
   line-height: 1;
-  background-color: #5F9EA0;
+  background-color: #48A980;
   margin-right:20px;  
 }
 
@@ -472,7 +472,7 @@ h6 {
   border: 1;
   font-size: 14px;
   color: black;
-  border: 1px solid rgba(95, 158, 160, 1);
+  border: 1px solid rgba(72, 169, 128, 1);
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
   transition: 0.3s;
@@ -500,7 +500,7 @@ h6 {
 .vr{
   margin-left: 10px;
   margin-right: 25px;
-  color:#5F9EA0;
+  color:#48A980;
 }
 
 .input-group{
@@ -512,8 +512,8 @@ h6 {
 }
 
 .btn.btn-primary{
-  background-color: #5F9EA0;
-  border-color: #5F9EA0;
+  background-color: #48A980;
+  border-color: #48A980;
   height: 36px;
 }
 
@@ -537,7 +537,7 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #5F9EA0;
+  color: #48A980;
   margin-right: 25px;
   position: relative;
 }
@@ -685,7 +685,7 @@ h6 {
   scrollbar-width: thin;
   scrollbar-color: white transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #5F9EA0;
+  background-color: #48A980;
 }
 
 @media (max-width: 1199px) {
@@ -761,7 +761,7 @@ h6 {
   font-weight: 600;
   color: white;
   transition: 0.3;
-  background: 	#5F9EA0;
+  background: 	#48A980;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -774,7 +774,7 @@ h6 {
 
 .sidebar-nav .nav-link.collapsed {
   color: white;
-  background: 	#5F9EA0;
+  background: 	#48A980;
 }
 
 .sidebar-nav .nav-link.collapsed i {
@@ -846,8 +846,8 @@ h6 {
 }
 
 #doughnutChart{
-  padding: 10px 10px 10px 10px;
-  max-height: 391px;
+  max-height: 280px;
+  margin-bottom: 55px;
 
 }
 
@@ -1052,7 +1052,7 @@ h6 {
 /* Pedidos recentes */
 
 .headerTabela{
-  background-color: #5F9EA0;
+  background-color: #48A980;
   
 }
 
