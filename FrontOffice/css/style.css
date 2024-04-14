@@ -316,6 +316,14 @@
     z-index: -2;
 }
 
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -409,9 +417,10 @@
 }
 
 
-/*** Team ***/
+/*** Patrocinadores ***/
 .team-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    box-shadow: 0 0 45px rgba(191, 191, 191, .3);
+    background-color: rgb(255,255,255,0.5);
 }
 
 .team-item .team-text {
@@ -452,6 +461,14 @@
 
 .team-item .team-social .btn {
     margin: 0 3px;
+    background-color: #48A980;
+    color: #FFFFFF;
+}
+
+.team-item .team-social .btn:hover {
+    margin: 0 3px;
+    background-color: #7DC7A8;
+    color: #FFFFFF;
 }
 
 .team-item:hover .team-social {
