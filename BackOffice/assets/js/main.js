@@ -12,7 +12,6 @@ localStorage.setItem("FiltroAtividadesSemana", "10");
 localStorage.setItem("FiltroAtividadesMes", "30");
 localStorage.setItem("FiltroAtividadesAno", "106");
 
-new DataTable("#tabelaAgenda");
 
 function pageload() {
   //Pesquisar na barra de pesquisa
