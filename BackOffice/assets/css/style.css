@@ -59,6 +59,16 @@ h6 {
   }
 }
 
+/*Icones bootstrap tabelas*/
+
+.corIcon{
+  color:blue;
+}
+
+.corIcon2{
+  color:red;
+}
+
 /*--------------------------------------------------------------
 # Page Title
 --------------------------------------------------------------*/
@@ -72,6 +82,22 @@ h6 {
   font-weight: 600;
   color: grey;
 }
+
+.TituloPagina h1 {
+  font-size: 24px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: grey;
+}
+
+.TituloPagina h6 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  color: grey;
+}
+
+
 
 /*--------------------------------------------------------------
 # Back to top button
