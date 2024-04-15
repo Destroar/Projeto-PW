@@ -26,27 +26,36 @@ function pageload() {
 
   //Filtro cartao das atividades hoje
   let filtroAtividadesHoje = document.getElementById("filtroAtividadesHoje");
-  filtroAtividadesHoje.addEventListener("click", function() {
-  filtroHoje();
+  if(filtroAtividadesHoje){
+    filtroAtividadesHoje.addEventListener("click", function() {
+    filtroHoje();
+  
   });
+}
 
    //Filtro cartao das atividades Semana
    let filtroAtividadesSemana = document.getElementById("filtroAtividadesSemana");
+   if(filtroAtividadesSemana){
    filtroAtividadesSemana.addEventListener("click", function() {
    filtroSemana();
    });
+  }
 
    //Filtro cartao das atividades Mes
    let filtroAtividadesMes = document.getElementById("filtroAtividadesMes");
+   if(filtroAtividadesMes){
    filtroAtividadesMes.addEventListener("click", function() {
    filtroMes();
    });
+  }
 
   //Filtro cartao das Atividades Ano
    let filtroAtividadesAno = document.getElementById("filtroAtividadesAno");
+   if(filtroAtividadesAno){
    filtroAtividadesAno.addEventListener("click", function() {
    filtroAno();
    });
+  }
 
 
   //Ao clicar no enter na barra de pesquisa
@@ -72,8 +81,10 @@ function pageload() {
     //Verifica numero do cartao das atividades
     function verificaNumeroAtividades(){
       let valor = document.getElementById("valorAlterarAtividades");
-      if(valor !== localStorage.getItem("FiltroAtividadesMes")){
-        valor.textContent = localStorage.getItem("FiltroAtividadesMes");
+      if(valor){
+        if(valor !== localStorage.getItem("FiltroAtividadesMes")){
+          valor.textContent = localStorage.getItem("FiltroAtividadesMes");
+        }
       }
     }
 
@@ -451,6 +462,8 @@ function pageload() {
 
   //Gráfico áreas das atividades
   document.addEventListener("DOMContentLoaded", () => {
+    const trafficChartElement = document.querySelector("#trafficChart");
+    if (trafficChartElement) {
     echarts.init(document.querySelector("#trafficChart")).setOption({
       tooltip: {
         trigger: 'item',
@@ -496,11 +509,14 @@ function pageload() {
         ]
       }]
     });
+  }
   });
 
   //Gráfico material em uso
   
   document.addEventListener("DOMContentLoaded", () => {
+    const trafficChartElement = document.querySelector("#doughnutChart");
+    if (trafficChartElement){
     new Chart(document.querySelector('#doughnutChart'), {
       type: 'doughnut',
       data: {
@@ -519,10 +535,13 @@ function pageload() {
         }]
       }
     });
+  }
   });
 
   //Gráfico atividades meses
   document.addEventListener("DOMContentLoaded", () => {
+    const trafficChartElement = document.querySelector("#doughnutChart");
+    if (trafficChartElement){
     new ApexCharts(document.querySelector("#reportsChart"), {
       series: [{
         name: 'Atividades',
@@ -565,6 +584,7 @@ function pageload() {
 
      
     }).render();
+  }
   });
 
 })();
