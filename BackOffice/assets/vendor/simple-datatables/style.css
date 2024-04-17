@@ -181,20 +181,20 @@
 	height: 0;
 	width: 0;
 	position: absolute;
-	right: 4px;
+	right: -6px;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	opacity: 0.2;
+	opacity: 0.7;
 }
 
 
 .datatable-sorter::before {
-	border-top: 4px solid #000;
+	border-top: 4px solid white;
 	bottom: 0px;
 }
 
 .datatable-sorter::after {
-	border-bottom: 4px solid #000;
+	border-bottom: 4px solid white;
 	border-top: 4px solid transparent;
 	top: 0px;
 }
@@ -204,6 +204,11 @@
 .datatable-ascending .datatable-filter::after,
 .datatable-descending .datatable-filter::before {
 	opacity: 0.6;
+}
+/*Retira as setas que ordenam*/
+.no-sort .datatable-sorter::before,
+.no-sort .datatable-sorter::after {
+    display: none;
 }
 
 .datatable-filter::before {
