@@ -478,8 +478,8 @@
 .project-carousel .owl-dot:hover,
 .project-carousel .owl-dot.active {
     color: #FFFFFF;
-    border-color: var(--primary);
-    background: var(--primary);
+    border-color: #48A980;
+    background: #48A980;
 }
 
 
