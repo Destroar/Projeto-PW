@@ -635,7 +635,7 @@
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: #48A980;
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -651,5 +651,5 @@
 }
 
 .footer .copyright a:hover {
-    color: var(--primary);
+    color: #48A980;
 }
