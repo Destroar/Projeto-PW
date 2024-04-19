@@ -343,7 +343,7 @@
     color: rgb(58,58,58);
 }
 
-/*** Service ***/
+/*** Tipologia de Serviços ***/
 .service-item {
     position: relative;
     border-radius: 8px;
@@ -434,7 +434,7 @@
 }
 
 
-/*** Project ***/
+/*** Galeria ***/
 .project-item a {
     position: absolute;
     width: 100%;
@@ -543,7 +543,6 @@
 
 
 /*** Testemunhos ***/
-
 .testimonial-carousel .owl-item .testimonial-item img {
     width: 60px;
     height: 60px;
