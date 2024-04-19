@@ -18,6 +18,21 @@ function pageload() {
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
 
+  //Botões de eliminar página eventos
+  let botaoEliminar = document.getElementById("botaoEliminar");
+  if(botaoEliminar){
+  botaoEliminar.addEventListener("click", function() {
+    eliminarLinha(botaoEliminar);
+  });
+  }
+
+  let botaoEliminar1 = document.getElementById("botaoEliminar1");
+  if(botaoEliminar1){
+  botaoEliminar1.addEventListener("click", function() {
+    eliminarLinha(botaoEliminar1);
+  });
+  }
+
   //VerificaNumeroAtividades
   verificaNumeroAtividades();
 
@@ -125,6 +140,12 @@ function pageload() {
       if(!(localStorage.getItem("FiltroAtividadesMes"))){
         localStorage.setItem("FiltroAtividadesMes", "30");
       }
+    }
+
+    //Elimina linha da tabela
+    function eliminarLinha(botaoEliminar){
+    let linha = botaoEliminar.closest('tr');
+    linha.remove();
     }
 
 

@@ -904,6 +904,18 @@ h6 {
   text-decoration: none;
 }
 
+/*Botão de eliminar página eventos*/
+#botaoEliminar{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#botaoEliminar1{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
 #trafficChart{
   min-height: 335px;
 }
