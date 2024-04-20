@@ -139,10 +139,10 @@
                         <a href="#galeria" class="dropdown-item">Galeria</a>
                         <a href="#patrocinadores" class="dropdown-item">Patrocinadores</a>
                         <a href="#testemunhos" class="dropdown-item">Testemunhos</a>
-                        <a href="#" class="dropdown-item">Doações</a>
+                        <a href="#dc" class="dropdown-item">Doações</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contactos</a>
+                <a href="#dc" class="nav-item nav-link">Contactos</a>
             </div>
             <a href="login.html" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Entrar</a>
         </div>
@@ -637,19 +637,19 @@
                             </div>
                             <p class="p-dc"><strong>Quantidade da Doação</strong></p>
                             <div class="col-12">
-                                <div class="input-group form-floating">
-                                    <input type="text" class="form-control" id="quantidade" placeholder="Quantidade">
-                                    <label for="quantidade">Quantidade</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="quantidade" placeholder="Quantidade" style="height: 58px;">
+                                    <span class="input-group-text">0.00</span>
                                     <i class="input-group-text bi bi-currency-euro"></i>
                                 </div>
                             </div>
                             <p class="p-dc"><strong>Método de Pagamento</strong></p>
                             <div class="col-12 form-check">
-                                <input type="radio" class="form-check-input" name="optradio" id="mbway">
+                                <input class="form-check-input" type="radio" name="optradio" id="mbway">
                                 <label class="form-check-label" for="mbway">MBWay</label>
                             </div>
                             <div class="col-12 form-check">
-                                <input type="radio" class="form-check-input" name="optradio" id="multibanco">
+                                <input class="form-check-input" type="radio" name="optradio" id="multibanco">
                                 <label class="form-check-label" for="multibanco">Multibanco</label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
@@ -663,13 +663,48 @@
                         <h6 class="section-title bg-white text-center cor-verde px-3">Contactos</h6>
                         <h1 class="display-6 mb-4">Contacta-Nos Com Sugestões de Eventos Ou Outros Assuntos</h1>
                     </div>
+                    <div class="container pt-4 pb-4 rounded-3 wow fadeInUp conteudo-dc" data-wow-delay="0.1s">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="assunto" >
+                                        <option selected></option>
+                                        <option value="1">Sugestão de Evento</option>
+                                        <option value="2">Testemunho</option>
+                                        <option value="3">Outro</option>
+                                    </select>
+                                    <label for="assunto">Assunto</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="email" placeholder="Email">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea type="text" class="form-control" placeholder="Deixe aqui uma mensagem" 
+                                        id="mensagem" placeholder="Quantidade" style="height: 254px"></textarea>
+                                    <label for="mensagem">Mensagem</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="button" class="btn btn-success rounded-pill py-3 px-5">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Doações/Contactos Start -->
+    <!-- Doações/Contactos End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
