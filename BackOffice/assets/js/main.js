@@ -7,16 +7,26 @@
 */
 
 window.onload = pageload;
+
+//cartao de atividades página inicial
 localStorage.setItem("FiltroAtividadesHoje", "2");
 localStorage.setItem("FiltroAtividadesSemana", "10");
 localStorage.setItem("FiltroAtividadesMes", "30");
 localStorage.setItem("FiltroAtividadesAno", "106");
+
+//Pedido de atividade;
+const Pedido = ["-","Pavilhão Multiusos - Guimarães", "Iniciativa desportiva","Torneio de Futebol","25/10/2024"];
+localStorage.setItem('PedidoAtividade', JSON.stringify(Pedido));
 
 
 function pageload() {
   //Pesquisar na barra de pesquisa
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
+
+  if(document.getElementById("tabelaPedidos")){
+  inserirDadosNaTabelaPedidos();
+  }
 
   //Botões de eliminar página eventos
   let botaoEliminar = document.getElementById("botaoEliminar");
@@ -146,6 +156,16 @@ function pageload() {
     function eliminarLinha(botaoEliminar){
     let linha = botaoEliminar.closest('tr');
     linha.remove();
+    }
+
+    //Insere um pedido do localStorage na tabela pedidos
+    function inserirDadosNaTabelaPedidos(){
+      let table = document.getElementById("tabelaPedidos");
+      const dadosPedido = JSON.parse(localStorage.getItem("PedidoAtividade"));
+      let row = table.insertRow(1);
+      for (let i = 0; i < dadosPedido.length; i++) {
+        row.insertCell(i).innerHTML = dadosPedido[i];
+      }
     }
 
 

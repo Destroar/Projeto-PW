@@ -57,15 +57,23 @@
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
+    <!--Barra de pesquisa-->
+   
     <div class="input-group">
       <div class="form-outline">
         <form class="search-form d-flex align-items-center" method="POST" action="#">
-          <input id="search" type="text" name="query" placeholder="Pesquisar" title="Enter search keyword" class="form-control" />
+          <input id="search" autocomplete="off" type="text" name="query" placeholder="Pesquisar" title="Enter search keyword" class="form-control" />
           </form>
         </div>
           <button id="botaoPesquisa" type="submit" title="Search" class="btn btn-primary"> 
             <i class="bi bi-search"></i></button>
     </div><!-- End Search Bar -->
+
+    <!--Resultados pesquisa-->
+
+    <!--Fim resultados pesquisa-->
+
+     <!--Fim da barra de pesquisa-->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -660,7 +668,7 @@
           <div class="TituloPagina">
             <h2>Pedidos</h2>
           </div>
-          <table class="table table-responsive table-hover text-center">
+          <table id="tabelaPedidos" class="table table-responsive table-hover text-center">
             <thead>
               <tr class="headerTabela">
                 <th scope="col"><span class="headerTabelaCor">Coordenador</span></th>
@@ -675,10 +683,10 @@
             <tbody>
               <tr>
                 <td>-</td>
-                <td>Pavilhão Multiusos - Guimarães</td>
+                <td>Pavilhão Xico Andebol - Guimarães</td>
                 <td>Iniciativa desportiva</td>
-                <td><a class="corLink" href="#">Torneio de Futebol</a></td>
-                <td>25/10/2024</td>
+                <td><a class="corLink" href="#">Torneio de Andebol</a></td>
+                <td>30/10/2024</td>
                 <td><i class="bi bi-check corIcon1"></i></td>
                 <td><i class="bi bi-x corIcon3"></i></td>
               </tr>
