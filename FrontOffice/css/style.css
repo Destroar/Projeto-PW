@@ -521,7 +521,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
     transition: .5s;
 }
 
@@ -599,17 +598,28 @@
     border: 1px solid #F8F8F8;
     padding: 2px 0;
     background-color: #F8F8F8;
-  }
+}
   
-  .testimonial-item p::-webkit-scrollbar {
+.testimonial-item p::-webkit-scrollbar {
     width: 5px;
-  }
+}
   
-  .testimonial-item p::-webkit-scrollbar-thumb {
+.testimonial-item p::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #48A980;
     border: 1px solid #48A980;
-  }
+}
+
+
+/*** Doações/Contactos ***/
+.conteudo-dc {
+    background-color: rgb(99,182,157,0.15);
+}
+
+.p-dc {
+    color: #012B19;
+    font-size: 20px;
+}
 
 
 /*** Footer ***/
