@@ -24,16 +24,18 @@ function pageload() {
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
 
-  if(document.getElementById("tabelaPedidos")){
+  if(document.getElementById("tabelaAgenda")){
   inserirDadosNaTabelaPedidos();
   }
 
   //Botões de eliminar página eventos
-  let botaoEliminar = document.getElementById("botaoEliminar");
+  let botaoEliminar = document.getElementsByClassName("botaoEliminar");
   if(botaoEliminar){
-  botaoEliminar.addEventListener("click", function() {
-    eliminarLinha(botaoEliminar);
-  });
+    for (let i = 0; i < botaoEliminar.length; i++) {
+      botaoEliminar[i].addEventListener("click", function() {
+          eliminarLinha(this);
+      });
+  }
   }
 
   let botaoEliminar1 = document.getElementById("botaoEliminar1");
@@ -160,11 +162,15 @@ function pageload() {
 
     //Insere um pedido do localStorage na tabela pedidos
     function inserirDadosNaTabelaPedidos(){
-      let table = document.getElementById("tabelaPedidos");
+      let table = document.getElementById("tabelaAgenda");
       const dadosPedido = JSON.parse(localStorage.getItem("PedidoAtividade"));
-      let row = table.insertRow(1);
+      let row = table.insertRow(-1);
       for (let i = 0; i < dadosPedido.length; i++) {
         row.insertCell(i).innerHTML = dadosPedido[i];
+        if(i == 4){
+          row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon"></i></button>'
+          row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2"></i></button>'
+        }
       }
     }
 

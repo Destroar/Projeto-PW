@@ -896,12 +896,7 @@ h6 {
 }
 
 /*Botão de eliminar página eventos*/
-#botaoEliminar{
-  background-color: transparent;
-  border-color: transparent;
-}
-
-#botaoEliminar1{
+.botaoEliminar{
   background-color: transparent;
   border-color: transparent;
 }
