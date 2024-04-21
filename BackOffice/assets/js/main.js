@@ -15,8 +15,11 @@ localStorage.setItem("FiltroAtividadesMes", "30");
 localStorage.setItem("FiltroAtividadesAno", "106");
 
 //Pedido de atividade;
-const Pedido = ["-","Pavilhão Multiusos - Guimarães", "Iniciativa desportiva","Torneio de Futebol","25/10/2024"];
-localStorage.setItem('PedidoAtividade', JSON.stringify(Pedido));
+const Atividade = ["-","Pavilhão Multiusos - Guimarães", "Iniciativa desportiva","Torneio de Futebol","25/10/2024"];
+localStorage.setItem('Atividade', JSON.stringify(Atividade));
+
+const Pedido = ["João Sousa","Estúdio de dança - Guimarães","Promoção da saúde mental","Aula de dança","25/11/2024"];
+localStorage.setItem('Atividade1', JSON.stringify(Pedido));
 
 
 function pageload() {
@@ -24,8 +27,8 @@ function pageload() {
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
 
-  if(document.getElementById("tabelaAgenda")){
-  inserirDadosNaTabelaPedidos();
+  if(document.getElementById("tabelaPedidos")){
+  inserirDadosNaTabelaPedidos("Atividade1");
   }
 
   //Botões de eliminar página eventos
@@ -38,11 +41,14 @@ function pageload() {
   }
   }
 
-  let botaoEliminar1 = document.getElementById("botaoEliminar1");
-  if(botaoEliminar1){
-  botaoEliminar1.addEventListener("click", function() {
-    eliminarLinha(botaoEliminar1);
-  });
+  //Botões de adicionar atividade
+  let botaoAdicionarAtividade = document.getElementsByClassName("botaoAceitarAtividade");
+  if(botaoAdicionarAtividade){
+    for (let i = 0; i < botaoAdicionarAtividade.length; i++) {
+      botaoAdicionarAtividade[i].addEventListener("click", function() {
+          adicionarAtividade(this);
+      });
+  }
   }
 
   //VerificaNumeroAtividades
@@ -161,18 +167,51 @@ function pageload() {
     }
 
     //Insere um pedido do localStorage na tabela pedidos
-    function inserirDadosNaTabelaPedidos(){
-      let table = document.getElementById("tabelaAgenda");
-      const dadosPedido = JSON.parse(localStorage.getItem("PedidoAtividade"));
-      let row = table.insertRow(-1);
+    function inserirDadosNaTabelaPedidos(AtividadeLS){
+      let table = document.getElementById("tabelaPedidos");
+      const dadosPedido = JSON.parse(localStorage.getItem(AtividadeLS));
+      let row = table.insertRow(1);
       for (let i = 0; i < dadosPedido.length; i++) {
         row.insertCell(i).innerHTML = dadosPedido[i];
         if(i == 4){
-          row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon"></i></button>'
-          row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2"></i></button>'
+          row.insertCell(5).innerHTML = ' <button class="botaoAceitarAtividade"> <i class="bi bi-check corIcon1 d-flex align-items-center"></i></button>'
+          row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-x corIcon3 d-flex align-items-center"></i></button>'
+          
         }
       }
     }
+
+   
+
+      //Insere um pedido do localStorage na tabela Agenda
+      function inserirDadosNaTabelaAgenda(AtividadeLS){
+        let table = document.getElementById("tabelaAgenda");
+        const dadosPedido = JSON.parse(localStorage.getItem(AtividadeLS));
+        let row = table.insertRow(-1);
+        for (let i = 0; i < dadosPedido.length; i++) {
+          row.insertCell(i).innerHTML = dadosPedido[i];
+          if(i == 4){
+            row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon "></i></button>'
+            row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2"></i></button>'
+            //adicionar isto para recarregar a função em todos os botoes com a classe botaoEliminar
+            let botaoEliminar = document.getElementsByClassName("botaoEliminar");
+            if(botaoEliminar){
+              for (let i = 0; i < botaoEliminar.length; i++) {
+                botaoEliminar[i].addEventListener("click", function() {
+                    eliminarLinha(this);
+                });
+            }
+            }
+          }
+        }
+      }
+
+      //neste momento adiciona a atividade 1 guardada no localStorage na tabela Agenda
+    function adicionarAtividade(botaoAceitarAtividade){
+      inserirDadosNaTabelaAgenda("Atividade1");
+      eliminarLinha(botaoAceitarAtividade);
+    }
+    
 
 
     

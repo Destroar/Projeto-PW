@@ -901,6 +901,11 @@ h6 {
   border-color: transparent;
 }
 
+.botaoAceitarAtividade{
+  background-color: transparent;
+  border-color: transparent;
+}
+
 
 #trafficChart{
   min-height: 335px;
