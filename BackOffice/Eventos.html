@@ -554,7 +554,7 @@
             <div class="cardPedidos2 px-3">
               <div class="card-body">
           <div class="TituloPagina">
-            <h2>Hoje - 15/04</h2>
+            <h2 id="diaAtual"></h2>
           </div>
           <table class="table table-responsive table-hover text-center">
             <thead>
@@ -603,21 +603,21 @@
         <div class="col-12">
           <div class="card recent-sales overflow-auto">
 
-            <div class="cardPedidos px-3">
+            <div class="cardPedidos2 px-3">
               <div class="card-body">
           <div class="TituloPagina">
             <h2>Agenda</h2>
           </div>
-          <table id="tabelaAgenda" class="datatable">
+          <table id="tabelaAgenda" class="table table-responsive table-hover text-center">
             <thead>
-              <tr>
-                <th>Coordenador</th>
-                <th>Local</th>
-                <th>Tipo</th>
-                <th>Atividade</th>
-                <th data-type="date" data-format="DD/MM/YYYY">Data</th>
-                <th class="no-sort"></th>
-                <th class="no-sort"></th>
+              <tr class="headerTabela">
+                <th scope="col"><span class="headerTabelaCor">Coordenador</span></th>
+                <th scope="col"><span class="headerTabelaCor">Local</span></th>
+                <th scope="col"><span class="headerTabelaCor">Tipo</span></th>
+                <th scope="col"><span class="headerTabelaCor">Atividade</span></th>
+                <th scope="col" data-type="date" data-format="DD/MM/YYYY"><button class="sort-agenda sort-agenda--start d-flex align-items-center"><span class="headerTabelaCor">Data</span></button></th>
+                <th scope="col"><span class="headerTabelaCor"></span></th>
+                <th scope="col"><span class="headerTabelaCor"></span></th>
               </tr>
             </thead>
             <tbody>
@@ -680,7 +680,7 @@
                 <th scope="col"><span class="headerTabelaCor"></span></th>
               </tr>
             </thead>
-            <tbody>
+            <tbody><tr></tr><!--
               <tr>
                 <td>-</td>
                 <td>Pavilhão Xico Andebol - Guimarães</td>
@@ -698,7 +698,7 @@
                 <td>25/11/2024</td>
                 <td><i class="bi bi-check corIcon1 "></i></td>
                 <td><i class="bi bi-x corIcon3"></i></td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
@@ -735,7 +735,7 @@
   <script src="assets/vendor/chart.js/chart.umd.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
   <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+ <!-- <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>-->
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 

@@ -23,6 +23,13 @@ localStorage.setItem('Atividade1', JSON.stringify(Pedido));
 
 
 function pageload() {
+  //dia atual
+  let dia = document.getElementById("diaAtual");
+  if(dia){
+    const data = new Date();
+    dia.innerHTML =  data.getDate() + "-" + (data.getMonth() + 1);
+  }
+
   //Pesquisar na barra de pesquisa
   let botaoPesquisa = document.getElementById("botaoPesquisa");
   botaoPesquisa.onclick = searchbar;
@@ -172,12 +179,18 @@ function pageload() {
       const dadosPedido = JSON.parse(localStorage.getItem(AtividadeLS));
       let row = table.insertRow(1);
       for (let i = 0; i < dadosPedido.length; i++) {
-        row.insertCell(i).innerHTML = dadosPedido[i];
-        if(i == 4){
+        if(i == 3){
+          row.insertCell(i).innerHTML = '<a class="corLink" href="#">'+ dadosPedido[i] +'</a>'
+        }
+        else if(i == 4){
+          row.insertCell(i).innerHTML = dadosPedido[i];
           row.insertCell(5).innerHTML = ' <button class="botaoAceitarAtividade"> <i class="bi bi-check corIcon1 d-flex align-items-center"></i></button>'
           row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-x corIcon3 d-flex align-items-center"></i></button>'
-          
         }
+         else {
+          row.insertCell(i).innerHTML = dadosPedido[i];
+        } 
+        
       }
     }
 
@@ -191,8 +204,8 @@ function pageload() {
         for (let i = 0; i < dadosPedido.length; i++) {
           row.insertCell(i).innerHTML = dadosPedido[i];
           if(i == 4){
-            row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon "></i></button>'
-            row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2"></i></button>'
+            row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon d-felx align-items-center"></i></button>'
+            row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2 d-flex align-items-center"></i></button>'
             //adicionar isto para recarregar a função em todos os botoes com a classe botaoEliminar
             let botaoEliminar = document.getElementsByClassName("botaoEliminar");
             if(botaoEliminar){
@@ -211,12 +224,61 @@ function pageload() {
       inserirDadosNaTabelaAgenda("Atividade1");
       eliminarLinha(botaoAceitarAtividade);
     }
-    
 
 
-    
+    //funcoes de ordenar na tabela
+    function convertDate(d) {
+      var p = d.split("/");
+      return +(p[2] + p[1] + p[0]);
+  }
   
-    
+  function sortByDate(direction) {
+      var tbody = document.querySelector("#tabelaAgenda tbody");
+      // get trs as array for ease of use
+      var rows = [].slice.call(tbody.querySelectorAll("tr"));
+  
+      if (direction === 'asc') {
+          document.querySelector(".sort-agenda").classList.remove('sort-agenda--start');
+          document.querySelector(".sort-agenda").classList.add('sort-agenda--end');
+  
+          rows.sort(function (a, b) {
+              return (
+                  convertDate(b.cells[4].innerHTML) -
+                  convertDate(a.cells[4].innerHTML)
+              );
+          });
+      } else {
+          document.querySelector(".sort-agenda").classList.add('sort-agenda--start');
+          document.querySelector(".sort-agenda").classList.remove('sort-agenda--end');
+  
+          rows.sort(function (a, b) {
+              return (
+                  convertDate(a.cells[4].innerHTML) -
+                  convertDate(b.cells[4].innerHTML)
+              );
+          });
+      }
+  
+      rows.forEach(function (v) {
+          tbody.appendChild(v);
+      });
+  }
+  
+  document.querySelector(".sort-agenda").addEventListener("click", () => {
+      if (document.querySelector(".sort-agenda").classList.contains('sort-agenda--start')) {
+          document.querySelector(".sort-agenda").innerText = "Data";
+  
+          sortByDate('asc');
+      } else {
+          document.querySelector(".sort-agenda").innerText = "Data";
+  
+          sortByDate('desc');
+      }
+  });
+
+
+  
+  
 (function() {
   "use strict";
 

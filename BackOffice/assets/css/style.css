@@ -906,6 +906,27 @@ h6 {
   border-color: transparent;
 }
 
+.sort-agenda{
+  background-color: transparent;
+  border-color: transparent;
+  padding-left:24px;
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  align-items: center;
+  height: 100%;
+}
+
+.sort-agenda--start{
+  background-color: transparent;
+  border-color: transparent;
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  align-items: center;
+
+}
+
 
 #trafficChart{
   min-height: 335px;
