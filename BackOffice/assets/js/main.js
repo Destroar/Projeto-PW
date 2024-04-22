@@ -49,7 +49,7 @@ function pageload() {
   if(botaoEliminar){
     for (let i = 0; i < botaoEliminar.length; i++) {
       botaoEliminar[i].addEventListener("click", function() {
-          eliminarLinha(this);
+          
       });
   }
   }
@@ -60,6 +60,16 @@ function pageload() {
     for (let i = 0; i < botaoAdicionarAtividade.length; i++) {
       botaoAdicionarAtividade[i].addEventListener("click", function() {
           adicionarAtividade(this);
+      });
+  }
+  }
+  //botao mais detalhes
+  let botaoDetalhes = document.getElementsByClassName("maisDetalhes");
+  if(botaoDetalhes){
+    for (let i = 0; i < botaoDetalhes.length; i++) {
+      botaoDetalhes[i].addEventListener("click", function() {
+          let pagina = "components-alerts.html";
+          window.open(pagina, "_blank");
       });
   }
   }
@@ -114,7 +124,7 @@ function pageload() {
   });
 
   //Filtrar ao clicar na data tabela agenda
-  if(document.getElementsByClassName("sort-agenda")){
+  if(document.getElementById("tabelaAgenda")){
     document.querySelector(".sort-agenda").addEventListener("click", () => {
         if (document.querySelector(".sort-agenda").classList.contains('sort-agenda--start')) {
             document.querySelector(".sort-agenda").innerText = "Data";
@@ -225,7 +235,7 @@ function pageload() {
         for (let i = 0; i < dadosPedido.length; i++) {
           row.insertCell(i).innerHTML = dadosPedido[i];
           if(i == 4){
-            row.insertCell(5).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-pencil-square corIcon d-felx align-items-center"></i></button>'
+            row.insertCell(5).innerHTML = ' <button class="maisDetalhes"> <i class="bi bi-pencil-square corIcon d-flex align-items-center"></i></button>'
             row.insertCell(6).innerHTML = ' <button class="botaoEliminar"> <i class="bi bi-trash-fill corIcon2 d-flex align-items-center"></i></button>'
             //adicionar isto para recarregar a função em todos os botoes com a classe botaoEliminar
             let botaoEliminar = document.getElementsByClassName("botaoEliminar");
@@ -236,6 +246,16 @@ function pageload() {
                 });
             }
             }
+
+            let botaoDetalhes = document.getElementsByClassName("maisDetalhes");
+            if(botaoDetalhes){
+              for (let i = 0; i < botaoDetalhes.length; i++) {
+                botaoDetalhes[i].addEventListener("click", function() {
+                    let pagina = "components-alerts.html";
+                    window.open(pagina, "_blank");
+      });
+  }
+  }
           }
         }
       }
