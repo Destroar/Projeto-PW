@@ -18,6 +18,12 @@ localStorage.setItem("FiltroAtividadesAno", "106");
 const Atividade = ["-","Pavilhão Multiusos - Guimarães", "Iniciativa desportiva","Torneio de Futebol","25/10/2024"];
 localStorage.setItem('Atividade', JSON.stringify(Atividade));
 
+/*if(localStorage.getItem('Pedido') === null){
+  const Pedido = {id:"1",coordenador:"Jão Sousa",tipo:"Iniciativa desportiva", tipo:"Estúdio de dança - Gualtar",
+  data:"22/04/2024",hora:"10:30",duracao:"3 horas", lugar:"Ali", num_min:"10", num_max:"20", materiais:["balizas", "bolas"] };
+  localStorage.setItem('Pedido', JSON.stringify(Pedido));
+}*/
+
 const Pedido = ["João Sousa","Estúdio de dança - Guimarães","Promoção da saúde mental","Aula de dança","25/11/2024"];
 localStorage.setItem('Atividade1', JSON.stringify(Pedido));
 
