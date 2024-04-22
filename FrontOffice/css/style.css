@@ -43,12 +43,12 @@
     background-image: url("../img/Imagem topo.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center top;
+    background-position: 0% 30%;
     display: flex;
     height: auto;
     justify-content: center;
     align-items: center;
-    min-height: 17rem;
+    min-height: 12rem;
     position: relative;
 }
 
@@ -349,6 +349,7 @@
     background-position-y: 95rem;
     position: relative;
     z-index: -2;
+    background-image: url('../img/background.jpg');
 }
 
 .parallax {
