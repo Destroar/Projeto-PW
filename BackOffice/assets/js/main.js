@@ -27,7 +27,7 @@ function pageload() {
   let dia = document.getElementById("diaAtual");
   if(dia){
     const data = new Date();
-    dia.innerHTML =  data.getDate() + "-" + (data.getMonth() + 1);
+    dia.innerHTML =  "Hoje  " + data.getDate() + "-" + (data.getMonth() + 1);
   }
 
   //Pesquisar na barra de pesquisa
@@ -106,6 +106,21 @@ function pageload() {
       searchbar(); // Chama a função searchbar quando "Enter" é pressionado
     }
   });
+
+  //Filtrar ao clicar na data tabela agenda
+  if(document.getElementsByClassName("sort-agenda")){
+    document.querySelector(".sort-agenda").addEventListener("click", () => {
+        if (document.querySelector(".sort-agenda").classList.contains('sort-agenda--start')) {
+            document.querySelector(".sort-agenda").innerText = "Data";
+    
+            sortByDate('asc');
+        } else {
+            document.querySelector(".sort-agenda").innerText = "Data";
+    
+            sortByDate('desc');
+        }
+    });
+  }
   
   } //fim do pageLoad
 
@@ -264,17 +279,6 @@ function pageload() {
       });
   }
   
-  document.querySelector(".sort-agenda").addEventListener("click", () => {
-      if (document.querySelector(".sort-agenda").classList.contains('sort-agenda--start')) {
-          document.querySelector(".sort-agenda").innerText = "Data";
-  
-          sortByDate('asc');
-      } else {
-          document.querySelector(".sort-agenda").innerText = "Data";
-  
-          sortByDate('desc');
-      }
-  });
 
 
   
@@ -734,5 +738,7 @@ function pageload() {
     }).render();
   }
   });
+
+  
 
 })();
